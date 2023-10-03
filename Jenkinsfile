@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Read-Artifact') {
             steps {
-                copyArtifacts projectName: 'create-artifact',
+                copyArtifacts projectName: 'artifact-create',
                     filter: 'report.txt',
                     fingerprintArtifacts: true,
                     selector: lastSuccessful()
